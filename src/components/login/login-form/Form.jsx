@@ -31,7 +31,7 @@ const Form = () => {
     try {
       const user = await signInWithEmailAndPassword(
         auth,
-        emailRef.current.value,
+        emailRef.current.value.toLowerCase(),
         passwordRef.current.value
       );
       // store the token in session

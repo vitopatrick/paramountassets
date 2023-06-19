@@ -41,6 +41,11 @@ const Form = () => {
         theme: "colored",
       });
     }
+
+    console.log(emailRef.current.value.toLowerCase());
+
+    debugger;
+
     //create the user in firebase and then save to firestore
     try {
       const { user } = await createUserWithEmailAndPassword(

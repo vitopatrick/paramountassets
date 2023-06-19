@@ -11,13 +11,13 @@ import usdtLogo from "../../img/usdt.png";
 export const wallets = [
   {
     coin: "Bitcoin",
-    address: "365A6i42dbYxewd6rhx5TqxKho4vcF7m2C",
+    address: "3Kv1Jpw7RDw3qtvzgfdX8rVXfGzgR3zbdB",
     addressName: "BTC Address",
     icon: BtcLogo,
   },
   {
     coin: "Ethereum ",
-    address: "0xf6505ea9E362b3A46A2459fFD763D387E6988f49",
+    address: "0x27B629Ef6313174a9E01a0FA276D655E830095Fa",
     addressName: "ETH Address:",
     icon: ethLogo,
   },

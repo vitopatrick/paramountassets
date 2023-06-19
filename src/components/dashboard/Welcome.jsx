@@ -31,6 +31,8 @@ const Welcome = () => {
     fetchUserDetails();
   }, [user.email]);
 
+  console.log(name);
+
   return (
     <Box>
       {name ? (
