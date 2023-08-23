@@ -33,6 +33,12 @@ export const wallets = [
     addressName: "USDT Address",
     icon: usdtLogo,
   },
+  {
+    coin: "USDC",
+    address: "0x7F35d952496703654484113a9A06126F6Bda1701",
+    addressName: "USDC Address",
+    icon: "https://cryptologos.cc/logos/usd-coin-usdc-logo.png",
+  },
   // {
   //   coin: "BNB",
   //   address: "bnb1qwsu84a7yrxf74e2yzz23zy2nul0wggk93u628",
