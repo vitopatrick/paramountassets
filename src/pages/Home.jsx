@@ -41,8 +41,4 @@ const Home = () => {
 
 export default Home;
 
-<script
-  src="//code.tidio.co/hnqi6bde9x32kk8gcxuctr64s1qmivci.js"
-  async
-></script>;
 
