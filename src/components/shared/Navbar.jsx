@@ -1,87 +1,122 @@
-import { useState } from "react";
-import { Link, useHref } from "react-router-dom";
-import { links } from "../../constants/links";
-import { FaBars } from "react-icons/fa";
-import { AiOutlineArrowUp } from "react-icons/ai";
+import React, { useState } from 'react';
+import { TrendingUp, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-  const href = useHref();
-  const [open, setOpen] = useState(false);
+export default function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleOpen = () => {
-    setOpen(!open);
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <>
-      <nav className="py-10 px-4 relative">
-        <div className="flex items-center justify-between">
-          <div className="font-sans text-3xl">Paramount Assets</div>
-          <div className="md:flex gap-8 hidden items-center">
-            {links.map((link) => (
-              <Link
-                key={link.id}
-                to={link.path}
-                className={
-                  href === link.path
-                    ? "uppercase text-main_light underline"
-                    : "uppercase hover:text-main_light text-main underline ease-in-out"
-                }
-              >
-                {link.name}
-              </Link>
-            ))}
-            <Link to="/register" className="bg-main text-white p-2 uppercase">
-              Get Started Now
-            </Link>
+    <header className="bg-white/95 backdrop-blur-sm border-b border-emerald-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex items-center space-x-2">
+            <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 p-2 rounded-lg">
+              <TrendingUp className="h-6 w-6 text-white" />
+            </div>
+            <span className="text-xl font-bold text-gray-900">Fidelity Assets</span>
           </div>
-          <div className="md:hidden inline-block">
-            {open ? (
-              <AiOutlineArrowUp
-                onClick={() => toggleOpen()}
-                className="cursor-pointer"
-              />
-            ) : (
-              <FaBars onClick={() => toggleOpen()} className="cursor-pointer" />
-            )}
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">Home</a>
+            <a href="#plans" className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">Plans</a>
+            <a href="#features" className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">Features</a>
+            <a href="#contact" className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">Contact</a>
+          </nav>
+          
+          {/* Desktop CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <button className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">
+              Sign In
+            </button>
+            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium">
+              Get Started
+            </button>
           </div>
-        </div>
-      </nav>
-      <SideNavbar open={open} />
-    </>
-  );
-};
 
-const SideNavbar = ({ open }) => {
-  const href = useHref();
-  return (
-    <nav
-      className={
-        open
-          ? "absolute bg-bg z-30 w-full p-3 md:hidden translate-y-[0px] ease-in-out"
-          : "absolute bg-bg z-30 w-full p-3 translate-y-[-999px] ease-in-out md:hidden"
-      }
-    >
-      <div className="flex flex-col gap-8">
-        {links.map((link) => (
-          <Link
-            key={link.id}
-            to={link.path}
-            className={
-              href === link.path
-                ? "uppercase text-main_light underline"
-                : "uppercase hover:text-main_light text-main underline ease-in-out"
-            }
+          {/* Mobile Menu Button */}
+          <button 
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            aria-label="Toggle menu"
           >
-            {link.name}
-          </Link>
-        ))}
-        <Link to="/register" className="bg-main text-white p-2 uppercase">
-          Get Started Now
-        </Link>
-      </div>
-    </nav>
-  );
-};
+            {isMenuOpen ? (
+              <X className="h-6 w-6 text-gray-700" />
+            ) : (
+              <Menu className="h-6 w-6 text-gray-700" />
+            )}
+          </button>
+        </div>
 
-export default Navbar;
+        {/* Mobile Navigation Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-emerald-100 bg-white/95 backdrop-blur-sm">
+            <div className="px-4 py-6 space-y-4">
+              <nav className="space-y-4">
+                <a 
+                  href="#home" 
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+                >
+                  Home
+                </a>
+                <a 
+                  href="#plans" 
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+                >
+                  Plans
+                </a>
+                <a 
+                  href="#features" 
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+                >
+                  Features
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={closeMenu}
+                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+                >
+                  Contact
+                </a>
+              </nav>
+              
+              {/* Mobile CTA Buttons */}
+              <div className="pt-4 border-t border-emerald-100 space-y-3">
+                <button 
+                  onClick={closeMenu}
+                  className="block w-full text-left text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
+                >
+                  <Link to={"/login"}>
+                  
+                  Sign In
+                  </Link>
+                </button>
+                <button 
+                  onClick={closeMenu}
+                  className="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium text-center"
+                >
+                  <Link to={'/register'}>
+                  
+                  Get Started
+                  </Link>
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}
