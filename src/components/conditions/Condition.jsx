@@ -5,7 +5,7 @@ const Condition = () => {
   return (
     <div className="md:p-8 p-4">
       <div>
-        <h5 className="font-serif text-xl md:text-3xl underline text-main_light">
+        <h5 className="font-sans text-xl md:text-3xl underline text-main_light">
           These are the following terms and conditions{" "}
         </h5>
         <div className="flex flex-col gap-5 mt-5">

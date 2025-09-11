@@ -1,62 +1,127 @@
-import React from "react";
-import { plans } from "../Plan/plans";
-import { FaChevronRight } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Check, Star } from 'lucide-react';
 
-const Plans = () => {
-  const navigate = useNavigate();
+const plans = [
+  {
+    name: "Starter",
+    price: "$500",
+    duration: "30 days",
+    returns: "8%",
+    features: [
+      "Daily profit updates",
+      "24/7 customer support",
+      "Mobile app access",
+      "Basic analytics"
+    ],
+    popular: false
+  },
+  {
+    name: "Growth",
+    price: "$2,500",
+    duration: "60 days",
+    returns: "15%",
+    features: [
+      "All Starter features",
+      "Priority support",
+      "Advanced analytics",
+      "Risk assessment tools",
+      "Portfolio diversification"
+    ],
+    popular: true
+  },
+  {
+    name: "Premium",
+    price: "$10,000",
+    duration: "90 days",
+    returns: "25%",
+    features: [
+      "All Growth features",
+      "Dedicated account manager",
+      "Custom investment strategies",
+      "Early access to new opportunities",
+      "VIP support line",
+      "Quarterly performance reviews"
+    ],
+    popular: false
+  }
+];
 
+export default function Plans() {
   return (
-    <section className="w-[90%] mx-auto p-2">
-      <div>
-        <h4 className="text-center font-serif text-2xl md:text-3xl text-main_light underline capitalize">
-          Choose from our variety of investment options
-        </h4>
-      </div>
-      <div className="font-sans grid md:grid-cols-2 gap-4 my-4">
-        {plans.map((plan) => (
-          <div className="bg-card p-3 rounded shadow overflow-hidden">
-            <div>
-              <h3 className="text-lg font-bold uppercase text-main">
-                {plan.title}
-              </h3>
-            </div>
-            <div className="flex gap-2 items-center font-bold my-4">
-              <sub className="text-lg">$</sub>
-              <h4 className="text-3xl text-main_light">{plan.price}</h4>
-            </div>
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-2">
-                <div>
-                  <img src="/chevron-down.png" alt="" />
-                </div>
-                <p>Minimum Amount ${plan.min}</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <div>
-                  <img src="/chevron-down.png" alt="" />
-                </div>
-                <p>Return of investment {plan.roi}</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <div>
-                  <img src="/chevron-down.png" alt="" />
-                </div>
-                <p>Duration {plan.Duration}</p>
-              </div>
-            </div>
-            <button
-              className="my-4 text-main_light p-2 flex items-center gap-3 uppercase"
-              onClick={() => navigate("/register")}
+    <section id="plans" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            Choose Your <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent">Investment Plan</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Select the plan that best fits your investment goals. All plans include our core security features and guaranteed returns.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {plans.map((plan, index) => (
+            <div
+              key={index}
+              className={`relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ${
+                plan.popular ? 'ring-2 ring-emerald-500 scale-105' : 'hover:ring-1 hover:ring-emerald-200'
+              }`}
             >
-              Get Started
-              <FaChevronRight />
-            </button>
-          </div>
-        ))}
+              {plan.popular && (
+                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-full text-sm font-semibold flex items-center space-x-1">
+                    <Star className="h-4 w-4" />
+                    <span>Most Popular</span>
+                  </div>
+                </div>
+              )}
+              
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                  <span className="text-gray-600 ml-2">minimum</span>
+                </div>
+                
+                <div className="mb-6">
+                  <div className="bg-emerald-50 p-4 rounded-lg">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-emerald-600 mb-1">{plan.returns}</div>
+                      <div className="text-sm text-emerald-700">Expected Returns</div>
+                      <div className="text-xs text-emerald-600 mt-1">{plan.duration} duration</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <Check className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button
+                  className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700'
+                      : 'border-2 border-emerald-500 text-emerald-600 hover:bg-emerald-50'
+                  }`}
+                >
+                  Get Started
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <p className="text-gray-600 text-sm">
+            * Returns are projected based on historical performance. Cryptocurrency investments carry inherent risks.
+          </p>
+        </div>
       </div>
     </section>
   );
-};
-
-export default Plans;
+}

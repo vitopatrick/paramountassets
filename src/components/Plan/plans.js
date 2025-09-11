@@ -29,7 +29,7 @@ export const plans = [
   {
     title: "Platinum",
     Duration: "7-14days",
-    price: "$100,000-$1,000,000",
+    price: "$100,000-$1M",
     min: "1000000",
     roi: "100%",
   },

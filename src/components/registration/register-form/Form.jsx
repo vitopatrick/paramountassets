@@ -114,7 +114,7 @@ const Form = () => {
           <div className="flex flex-col items-center gap-4">
             <Link
               to="/"
-              className="font-serif text-3xl text-main hover:text-main_light hover:underline"
+              className="font-sans text-3xl text-main hover:text-main_light hover:underline"
             >
               Paramount Assets
             </Link>

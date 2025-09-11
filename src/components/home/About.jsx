@@ -6,7 +6,7 @@ const HomeAbout = () => {
     <section className="bg-card p-3">
       <div className="gap-5 flex flex-col md:flex-row w-[90%] mx-auto p-3">
         <div className="flex flex-col gap-4 self-center">
-          <h3 className="font-serif text-2xl md:text-4xl text-main_light">
+          <h3 className="font-sans text-2xl md:text-4xl text-main_light">
             Paramount Assets is a Self-Directed Trader’s Nerve Center
           </h3>
           <div className="flex gap-2 items-center">
@@ -54,7 +54,7 @@ const HomeAbout = () => {
       </div>
       {/* More Abouts  */}
       <div className="w-[90%] mx-auto p-4 space-y-5">
-        <h4 className="font-serif text-2xl md:text-4xl text-main_light">
+        <h4 className="font-sans text-2xl md:text-4xl text-main_light">
           First Start your Financial Journey
         </h4>
         <p>

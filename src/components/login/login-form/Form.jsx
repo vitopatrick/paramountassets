@@ -95,7 +95,7 @@ const Form = () => {
         <div className="text-center">
           <Link
             to="/"
-            className="font-serif text-3xl text-main hover:text-main_light hover:underline"
+            className="font-sans text-3xl text-main hover:text-main_light hover:underline"
           >
             Paramount Assets
           </Link>

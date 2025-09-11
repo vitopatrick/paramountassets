@@ -1,37 +1,57 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { ArrowRight, Shield, TrendingUp, Zap } from 'lucide-react';
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section
-      style={{
-        background: `url('https://images.pexels.com/photos/5980576/pexels-photo-5980576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-      className="h-[400px] relative"
-    >
-      <div className="w-full h-full absolute bg-bg/70 left-0 top-0">
-        <div className="flex items-center justify-center flex-col my-5 text-center">
-          <h4 className="font-serif md:text-5xl text-3xl my-3">
-            Welcome to Paramount Assets
-          </h4>
-          <p className="capitalize p-2">
-            grow your cryptocurrency portfolio and skyrocket to the sky, the
-            moon is your starting point, Connect with thousands of self-directed
-            traders and investors through live stream, chat and social media
-            ecosystem.
+    <section id="home" className="bg-gradient-to-br from-emerald-50 to-green-50 pt-20 pb-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            Grow Your
+            <span className="bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent"> Crypto</span>
+            <br />
+            Portfolio
+          </h1>
+          <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Join thousands of investors who trust our platform for secure, high-yield cryptocurrency investments. 
+            Start building your financial future today with our proven investment strategies.
           </p>
-          <Link
-            to="/register"
-            className="bg-main text-main_light p-3 uppercase"
-          >
-            Get Started With us now
-          </Link>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+              <span>Start Investing</span>
+              <ArrowRight className="h-5 w-5" />
+            </button>
+            <button className="border-2 border-emerald-500 text-emerald-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-50 transition-all duration-300">
+              View Plans
+            </button>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <div className="text-center">
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Shield className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure & Trusted</h3>
+                <p className="text-gray-600">Bank-level security with multi-layer protection for your investments</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <TrendingUp className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">High Returns</h3>
+                <p className="text-gray-600">Competitive yields with proven track record of consistent growth</p>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Zap className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Instant Access</h3>
+                <p className="text-gray-600">Quick setup and immediate access to your investment dashboard</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Hero;
+}

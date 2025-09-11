@@ -37,7 +37,7 @@ const Form = () => {
       <div>
         <div>
           <div>
-            <h1 className="font-serif text-2xl py-4">
+            <h1 className="font-sans text-2xl py-4">
               Let us here your complain
             </h1>
           </div>

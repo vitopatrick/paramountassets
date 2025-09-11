@@ -4,7 +4,7 @@ const AboutHeader = () => {
   return (
     <div>
       <div className="p-4 text-center">
-        <h4 className="font-serif text-3xl my-3 text-main_light underline">
+        <h4 className="font-sans text-3xl my-3 text-main_light underline">
           About Paramount Assets
         </h4>
         <p>

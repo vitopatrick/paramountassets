@@ -5,7 +5,7 @@ import { FaMapMarker, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 const Address = () => {
   return (
     <IconContext.Provider value={{ color: "#ede2d4", size: "1.8rem" }}>
-      <h4 className="text-center text-2xl font-serif mt-6">
+      <h4 className="text-center text-2xl font-sans mt-6">
         You can also reach us via:
       </h4>
       <div className="p-5">
@@ -25,7 +25,7 @@ const Address = () => {
             </div>
             <div className="text-center my-2">
               <h1 className="fs-4">Email</h1>
-              <p>support@paramountassets.live</p>
+              <p>support@fidelityassets.site</p>
             </div>
           </div>
           <div className="bg-card p-5 rounded flex flex-col items-center justify-center">

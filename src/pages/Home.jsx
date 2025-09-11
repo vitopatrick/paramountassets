@@ -3,11 +3,13 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
-import HomeAbout from "../components/home/About";
 import Plans from "../components/home/Plans";
 import Hero from "../components/home/Hero";
 import Reasons from "../components/home/Reasons";
 import AboutReach from "../components/about/AboutReach";
+import FAQ from "../components/home/Faq";
+import Testimonials from "../components/home/Testimonial";
+import CTA from "../components/home/CTA";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -27,13 +29,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="bg-bg text-white w-screen">
+    <div>
       <Navbar />
       <Hero />
       <Reasons />
-      <HomeAbout />
       <AboutReach />
+      <Testimonials/>
       <Plans />
+      <CTA/>
+      <FAQ/>
       <Footer />
     </div>
   );

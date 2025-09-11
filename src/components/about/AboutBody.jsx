@@ -6,7 +6,7 @@ const AboutBody = () => {
     <div className="grid md:grid-cols-2 gap-4 p-6">
       {abouts.map((about) => (
         <div>
-          <div className="my-3 text-3xl font-serif text-main_light underline">
+          <div className="my-3 text-3xl font-sans text-main_light underline">
             {about.name}
           </div>
           <div className="leading-loose">{about.story}</div>
