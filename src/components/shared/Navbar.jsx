@@ -94,24 +94,24 @@ export default function Navbar() {
               
               {/* Mobile CTA Buttons */}
               <div className="pt-4 border-t border-emerald-100 space-y-3">
+                <Link to={"/login"}>
                 <button 
                   onClick={closeMenu}
                   className="block w-full text-left text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
                 >
-                  <Link to={"/login"}>
                   
                   Sign In
-                  </Link>
                 </button>
+                  </Link>
+                <Link to={'/register'}>
                 <button 
                   onClick={closeMenu}
                   className="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium text-center"
                 >
-                  <Link to={'/register'}>
                   
                   Get Started
-                  </Link>
                 </button>
+                  </Link>
               </div>
             </div>
           </div>

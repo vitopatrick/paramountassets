@@ -72,7 +72,7 @@ const Form = () => {
         uid: user.uid,
       });
       // toast notification
-      toast.success("Welcome to Paramount Assets", {
+      toast.success("Welcome to fidelity  Assets", {
         position: "top-center",
         theme: "colored",
       });
@@ -116,7 +116,7 @@ const Form = () => {
               to="/"
               className="font-sans text-3xl text-main hover:text-main_light hover:underline"
             >
-              Paramount Assets
+              fidelity  Assets
             </Link>
             <p className="capitalize text-center">
               If you already have an account with us click here to{" "}
@@ -212,7 +212,7 @@ const Form = () => {
                 >
                   Terms & Conditions
                 </Link>
-                {""} of Paramount Assets
+                {""} of fidelity  Assets
               </p>
             </div>
             <button
@@ -226,7 +226,7 @@ const Form = () => {
           {/* copyright and legal section */}
           <div className="text-center mt-2">
             <p className="text-primary">
-              © Copyright {new Date().getFullYear()} Paramount Assets All Rights
+              © Copyright {new Date().getFullYear()} fidelity  Assets All Rights
               Reserved.
             </p>
           </div>

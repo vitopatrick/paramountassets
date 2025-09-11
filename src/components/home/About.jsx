@@ -7,7 +7,7 @@ const HomeAbout = () => {
       <div className="gap-5 flex flex-col md:flex-row w-[90%] mx-auto p-3">
         <div className="flex flex-col gap-4 self-center">
           <h3 className="font-sans text-2xl md:text-4xl text-main_light">
-            Paramount Assets is a Self-Directed Trader’s Nerve Center
+            fidelity  Assets is a Self-Directed Trader’s Nerve Center
           </h3>
           <div className="flex gap-2 items-center">
             <div>
@@ -31,7 +31,7 @@ const HomeAbout = () => {
               <img src="/chevron-down.png" alt="" />
             </div>
             <p>
-              Paramount Assets partners with professional traders around the
+              fidelity  Assets partners with professional traders around the
               globe to provide you a hub of information, education, strategy,
               live streams, social media ecosystsems and buy/sell signals for
               self-directed traders and investors.
@@ -58,26 +58,26 @@ const HomeAbout = () => {
           First Start your Financial Journey
         </h4>
         <p>
-          Paramount Assets is a forex trading company . They have an algorithmic
+          fidelity  Assets is a forex trading company . They have an algorithmic
           machine that handles all the trades . The machine studies all stocks
           then trade for you and make double profits daily.The system does all
           the trading for you, it uses an algorithm to trade and make profits
           for you . All you have to do is create an account then deposit crypto
-          coin into your paramount asset account then the coin will be traded by
-          the paramount machine and it will make profits for you by multiplying
+          coin into your fidelity  asset account then the coin will be traded by
+          the fidelity  machine and it will make profits for you by multiplying
           your coins then you can go ahead and withdraw your profits instantly .
           It’s currency is static and it doesn’t depreciate, It doesn’t go down
           in value but your profits goes up daily.
         </p>
         <p>
-          Paramount Assets is an Hedge Funds company that take cares of your
+          fidelity  Assets is an Hedge Funds company that take cares of your
           forex trading. They trade with your money and pay’s you 100% ROI,
           meaning you would get double of every amount you invest with them with
           in 24hours. The company has Algorithms that help them trades stocks/
           crypto in the market. This Algorithms can detect when a stock/crypto
           is going up or going down to maximize profits making . The Algorithm
           give’s signal for market execution and the company engage a good team
-          of speculators for Technical Analysis. Paramount Asset is fully
+          of speculators for Technical Analysis. fidelity  Asset is fully
           Certified by SEC The investment has different packages/plans . Here
           are the plans below
         </p>

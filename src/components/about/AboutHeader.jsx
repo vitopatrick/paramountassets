@@ -5,10 +5,10 @@ const AboutHeader = () => {
     <div>
       <div className="p-4 text-center">
         <h4 className="font-sans text-3xl my-3 text-main_light underline">
-          About Paramount Assets
+          About fidelity  Assets
         </h4>
         <p>
-          Paramount Assets is one of the leading cryptocurrency platforms,
+          fidelity  Assets is one of the leading cryptocurrency platforms,
           offering cryptocurrency mining capacities in every range - for
           newcomers. Our mission is to make acquiring cryptocurrencies easy and
           fast for everyone.

@@ -97,7 +97,7 @@ const Form = () => {
             to="/"
             className="font-sans text-3xl text-main hover:text-main_light hover:underline"
           >
-            Paramount Assets
+            fidelity  Assets
           </Link>
           <p>
             Click here to{" "}

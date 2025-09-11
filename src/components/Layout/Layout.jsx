@@ -85,7 +85,7 @@ const Layout = (props) => {
             <MdMenu />
           </IconButton>
           <h4 className="font-sans text-2xl text-main_light">
-            Paramount Assets
+            fidelity  Assets
           </h4>
         </Toolbar>
       </AppBar>
