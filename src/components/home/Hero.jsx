@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Shield, TrendingUp, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -17,16 +18,24 @@ export default function Hero() {
             Start building your financial future today with our proven investment strategies.
           </p>
           
+          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2">
+            <Link 
+              to="/register"
+              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+            >
               <span>Start Investing</span>
               <ArrowRight className="h-5 w-5" />
-            </button>
-            <button className="border-2 border-emerald-500 text-emerald-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-50 transition-all duration-300">
+            </Link>
+            <a 
+              href="#plans"
+              className="border-2 border-emerald-500 text-emerald-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-50 transition-all duration-300"
+            >
               View Plans
-            </button>
+            </a>
           </div>
           
+          {/* Features Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
             <div className="text-center">
               <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
