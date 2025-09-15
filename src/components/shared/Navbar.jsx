@@ -18,12 +18,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <a href="#home" className="flex items-center space-x-2">
             <div className="bg-gradient-to-r from-emerald-500 to-emerald-600 p-2 rounded-lg">
               <TrendingUp className="h-6 w-6 text-white" />
             </div>
             <span className="text-xl font-bold text-gray-900">Fidelity Assets</span>
-          </div>
+          </a>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -35,12 +35,18 @@ export default function Navbar() {
           
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-gray-700 hover:text-emerald-600 transition-colors font-medium">
+            <Link 
+              to="/login" 
+              className="text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+            >
               Sign In
-            </button>
-            <button className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium">
+            </Link>
+            <Link 
+              to="/register" 
+              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-2 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -62,56 +68,28 @@ export default function Navbar() {
           <div className="md:hidden border-t border-emerald-100 bg-white/95 backdrop-blur-sm">
             <div className="px-4 py-6 space-y-4">
               <nav className="space-y-4">
-                <a 
-                  href="#home" 
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
-                >
-                  Home
-                </a>
-                <a 
-                  href="#plans" 
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
-                >
-                  Plans
-                </a>
-                <a 
-                  href="#features" 
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
-                >
-                  Features
-                </a>
-                <a 
-                  href="#contact" 
-                  onClick={closeMenu}
-                  className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
-                >
-                  Contact
-                </a>
+                <a href="#home" onClick={closeMenu} className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2">Home</a>
+                <a href="#plans" onClick={closeMenu} className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2">Plans</a>
+                <a href="#features" onClick={closeMenu} className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2">Features</a>
+                <a href="#contact" onClick={closeMenu} className="block text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2">Contact</a>
               </nav>
               
               {/* Mobile CTA Buttons */}
               <div className="pt-4 border-t border-emerald-100 space-y-3">
-                <Link to={"/login"}>
-                <button 
+                <Link 
+                  to="/login" 
                   onClick={closeMenu}
                   className="block w-full text-left text-gray-700 hover:text-emerald-600 transition-colors font-medium py-2"
                 >
-                  
                   Sign In
-                </button>
-                  </Link>
-                <Link to={'/register'}>
-                <button 
+                </Link>
+                <Link 
+                  to="/register" 
                   onClick={closeMenu}
                   className="block w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-3 rounded-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 font-medium text-center"
                 >
-                  
                   Get Started
-                </button>
-                  </Link>
+                </Link>
               </div>
             </div>
           </div>
